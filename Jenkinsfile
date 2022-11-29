@@ -1,6 +1,6 @@
 pipeline {
   environment {
-    imagename = "arjunachari12/nodejs-jenkins-sample"
+    imagename = "anuragranjan/nodejs-jenkins-sample"
     registryCredential = 'dockerhub'
     dockerImage = ''
   }
@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Cloning Git') {
       steps {
-        git([url: 'https://github.com/arjunachari12/docker-demo.git', branch: 'master'])
+        git([url: 'https://github.com/omphm/docker-demo.git', branch: 'master'])
       }
       }
     stage('Building image') {
